@@ -1,0 +1,76 @@
+@startuml
+
+class Usuario{
+-String DNI;
+-String nombre;
++Usuario(String nombre, String DNI);
++setNombre(String nombre);
++setDNI(String DNI);
++String getNombreUsuario();
++String getDNIUsuario();
+}
+
+class Alumnos{
+-int numeroMatricula;
+-String grupo;
+-int dimeNota;
++Alumnos(String dimeNota, String nombre, String grupo);
++int getNumeroMatricula();
++String getGrupoAlumnos();
++int getDimeNotaAlumnos();
++setNumeroMatricula(int numeroMatricula);
++setGrupo(String grupo);
++setDimeNota(int dimeNota);
+}
+
+class Control{
+-int numeroControl;
+-Date fecha_a_Realizar;
+-double nota;
+-String almacenar_Nota;
++Control(int numeroControl, double notas, Date fecha_a_Realizar);
++Control(String almacenar_Notas);
++String getAlmacenar_Notas();
++int getNumeroControl();
++double getNotas();
++Date getFecha_a_Realizar();
++setAlmacenar_Notas(String almacenar_Notas);
++setNumeroControl(int numeroControl);
++setNotas(double notas);
++setFecha_a_Realizar(Date fecha_a_Realizar);
+}
+
+class Practicas{
+-String titulo;
+-String codigo;
+-String gradoDeDificultad;
+-String dimeAutorDiseño;
++Practicas(String gradoDeDificultad, String codigo, String titulo);
++Practicas(String dimeAutorDiseño);
++String getTitulo();
++String getCodigo();
++String getGradoDeDificultad();
++String getDimeAutorDiseno();
++setTitulo(String titulo);
++setCodigo(String codigo);
++setGradoDeDificultad(String gradoDeDificultad);
++setDimeAutorDiseno(String dimeAutorDiseno);
+}
+
+class Profesor{
+-String diseñarPractica;
+-Date fechaPuesta;
++Profesor(String DNI, String diseñar);
++String getDiseñarPractica();
++setDiseñarPractica(String diseñarPractica);
++Date getFechaPuesta();
+}
+
+class pregunta{
+-int numeroDePreguntas;
++Pregunta(int numeroDePregunta);
++int getNumPreguntas();
++setNumPreguntas(int numPreguntas);
+}
+
+@enduml
