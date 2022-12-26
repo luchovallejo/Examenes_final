@@ -66,11 +66,4 @@ class Profesor{
 +Date getFechaPuesta();
 }
 
-class pregunta{
--int numeroDePreguntas;
-+Pregunta(int numeroDePregunta);
-+int getNumPreguntas();
-+setNumPreguntas(int numPreguntas);
-}
-
 @enduml
