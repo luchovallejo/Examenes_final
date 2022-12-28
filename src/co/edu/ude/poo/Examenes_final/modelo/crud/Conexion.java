@@ -9,10 +9,6 @@ import javax.swing.JOptionPane;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author Hillary alejandra
- */
 public class Conexion {
     public static Connection getConnection()
     {
@@ -63,7 +59,7 @@ public class Conexion {
                 Class.forName("org.gjt.mm.mysql.Driver");
             
                 cone = (com.mysql.jdbc.Connection)DriverManager.getConnection(url, user, pass); 
-             
+           
             }
 
             return cone; 
@@ -71,11 +67,7 @@ public class Conexion {
         catch (ClassNotFoundException | SQLException e) 
         {
             JOptionPane.showMessageDialog(null,"Error al crear la conexión "+e.getMessage());
-            
             throw new RuntimeException("Error al crear la conexión");
         }
     }
-    
-    
-    
 }

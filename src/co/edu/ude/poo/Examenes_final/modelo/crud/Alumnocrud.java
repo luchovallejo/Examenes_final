@@ -9,10 +9,6 @@ import com.mysql.jdbc.PreparedStatement;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
 
-/**
- *
- * @author Hillary alejandra
- */
 public class Alumnocrud {
      public boolean registrar(int matricula, String nombre, String apellido, String grupo,String realizo,String fecha,String profesor,int nota)
     {
@@ -42,12 +38,7 @@ public class Alumnocrud {
             pst.setString(7, profesor);
             
             pst.setInt(8, nota);
-            
-           
-            
-           
-            
-            
+        
             int i = pst.executeUpdate();
             
             if (i != 0)
@@ -59,18 +50,14 @@ public class Alumnocrud {
             else
             {
                 JOptionPane.showMessageDialog(null,"Error en la transaccion");
-                
                 return false;
             }
             
         }
         catch(SQLException e)
         {            
-            
             JOptionPane.showMessageDialog(null, e.getMessage());
-            
             return false;
         }
     }
-    
 }
